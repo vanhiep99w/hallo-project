@@ -1,0 +1,70 @@
+@tailwind base;
+
+@layer base {
+    body {
+        font-family: 'Roboto', Courier, monospace;
+    }
+}
+
+/* create css component  */
+@tailwind components;
+
+@layer components {
+    .banner-img {
+        @apply w-full h-full object-cover object-center cursor-pointer
+    }
+
+    .session-title {
+        @apply font-semibold text-[16px] leading-[19x]
+    }
+
+    .add-button {
+        @apply text-[12px] leading-[14px] font-normal text-red-primary whitespace-nowrap cursor-pointer
+    }
+
+    .category-item {
+        @apply flex flex-col
+    }
+
+    .category-title {
+        @apply text-[12px] text-center leading-[14px] font-normal mt-[10px] cursor-pointer grow-0
+    }
+
+    .category-img {
+        @apply w-full object-cover object-center cursor-pointer grow
+    }
+
+    .firm-title {
+        @apply text-[16px] font-normal leading-[19px] pt-[8px] cursor-pointer
+    }
+
+    .firm-img {
+        @apply w-full cursor-pointer object-cover object-center h-[123px] transition duration-500
+    }
+
+    .firm-img:hover {
+        @apply scale-110
+    }
+
+    .category-title:hover,
+    .firm-title:hover {
+        @apply text-red-primary
+    }
+
+}
+
+@tailwind utilities;
+
+
+/* overide css thirdparty */
+.slick-dots {
+    @apply absolute bottom-0 left-1/2 translate-x-[-50%] translate-y-[14px] !flex items-center justify-center space-x-1
+}
+
+.slick-dots button {
+    @apply text-[0px] w-[6px] h-[6px] bg-dark-secondary rounded-full
+}
+
+.slick-dots li.slick-active button {
+    @apply bg-blue-primary
+}
